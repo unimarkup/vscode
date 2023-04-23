@@ -85,14 +85,14 @@ function getServerPath(): string {
   const os = require('node:os');
   if (os.platform() === 'win32') {
     // Windows
-    return "server_bin\\unimarkup_lsp.exe";
+    return "server_bin\\windows\\unimarkup-lsp.exe";
   }
   else if (os.platform() === 'darwin') {
     // macOS
-    return "server_bin/unimarkup_lsp";
+    return "server_bin/macos/unimarkup-lsp";
   } else {
     // Assume Linux for others
-    return "server_bin/unimarkup_lsp";
+    return "server_bin/linux/unimarkup-lsp";
   }
 }
 
