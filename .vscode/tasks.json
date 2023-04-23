@@ -46,7 +46,27 @@
 			"options": {
 				"cwd": "${workspaceFolder}/../unimarkup-lsp/"
 			},
-			"command": "cargo build --package unimarkup_ls; cp target/debug/unimarkup_ls* ../vscode/server_bin",
+			"command": "cargo build --package unimarkup_lsp; cp target/debug/unimarkup_ls* ../vscode/server_bin",
+			"problemMatcher": "$rustc"
+		},
+		{
+			"label": "Build release Server",
+			"group": "build",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceFolder}/../unimarkup-lsp/"
+			},
+			"command": "cargo build --release --package unimarkup_lsp; cp target/release/unimarkup_ls* ../vscode/server_bin",
+			"problemMatcher": "$rustc"
+		},
+		{
+			"label": "Build Server for Linux",
+			"group": "build",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceFolder}/../unimarkup-lsp/"
+			},
+			"command": "cargo build --target x86_64-unknown-linux-gnu --release --package unimarkup_lsp; cp target/release/unimarkup_ls* ../vscode/server_bin",
 			"problemMatcher": "$rustc"
 		}
 	]

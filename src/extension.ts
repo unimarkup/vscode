@@ -85,14 +85,14 @@ function getServerPath(): string {
   const os = require('node:os');
   if (os.platform() === 'win32') {
     // Windows
-    return "server_bin\\unimarkup_ls.exe";
+    return "server_bin\\unimarkup_lsp.exe";
   }
   else if (os.platform() === 'darwin') {
     // macOS
-    return "server_bin/unimarkup_ls";
+    return "server_bin/unimarkup_lsp";
   } else {
     // Assume Linux for others
-    return "server_bin/unimarkup_ls";
+    return "server_bin/unimarkup_lsp";
   }
 }
 
@@ -119,7 +119,7 @@ function updatePreview(uriFsPath: string | undefined, origContentEditor: TextEdi
   if (content !== undefined && activePreviewPanel !== undefined) {
     activePreviewPanel.id = uriFsPath;
     const html = getWebviewContent(content, new PreviewState(activePreviewPanel.id));
-    console.log(html);
+
     activePreviewPanel.panel.webview.html = html;
     activePreviewPanel.panel.title = getPreviewTitle(uriFsPath);
   }
