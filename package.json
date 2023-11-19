@@ -33,10 +33,20 @@
           "*.declaration": {
             "bold": true
           },
-          "*.definition": {
+          "*.definition": "#aaaa00",
+          "*.readonly": {
             "italic": true
           },
-          "*.readonly": "#ff0000"
+          "*.static": "#00aa00",
+          "*.deprecated": "#666666",
+          "*.abstract": {
+            "strikethrough": true
+          },
+          "*.async": "#aa0000",
+          "*.modification": "#00aabb",
+          "*.documentation": {
+            "underline": true
+          }
         }
       }
     },
