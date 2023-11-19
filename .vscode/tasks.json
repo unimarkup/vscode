@@ -46,7 +46,7 @@
 			"options": {
 				"cwd": "${workspaceFolder}/../unimarkup-lsp/"
 			},
-			"command": "cargo build --target x86_64-pc-windows-msvc --package unimarkup-lsp; cp target/debug/unimarkup-lsp* ../vscode/server_bin/windows",
+			"command": "cargo build --target x86_64-pc-windows-msvc --package unimarkup-lsp; cp target/x86_64-pc-windows-msvc/debug/unimarkup-lsp* ../vscode/server_bin/windows",
 			"problemMatcher": "$rustc"
 		},
 		{
@@ -56,7 +56,7 @@
 			"options": {
 				"cwd": "${workspaceFolder}/../unimarkup-lsp/"
 			},
-			"command": "cargo build --target x86_64-pc-windows-msvc --release --package unimarkup-lsp; cp target/release/unimarkup-lsp* ../vscode/server_bin/windows",
+			"command": "cargo build --target x86_64-pc-windows-msvc --release --package unimarkup-lsp; cp target/x86_64-pc-windows-msvc/release/unimarkup-lsp* ../vscode/server_bin/windows",
 			"problemMatcher": "$rustc"
 		},
 		{
